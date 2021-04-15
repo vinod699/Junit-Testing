@@ -1,10 +1,11 @@
 package com.demo;
 
-        import org.junit.jupiter.api.Assertions;
-        import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class UserValidationTest {
     UserValidator validator = new UserValidator();
+
     @Test
     public void isFirstNameValid()
     {
@@ -12,4 +13,12 @@ public class UserValidationTest {
         Assertions.assertEquals(true,result);
 
     }
+    @Test
+    public void isLastNameValid()
+    {
+        boolean result=validator.validateLastName("sai");
+        Assertions.assertEquals(true,result);
+
+    }
+
 }
